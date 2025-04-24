@@ -1,7 +1,7 @@
 # BiLstm-VAE-Anomaly-Weighted-Model-for-Risk-Graded-Mine-Water-Inrush-Early-Warning
 Bidirectional LSTM and Variational Autoencoder-Based Spatiotemporal Anomaly Detection System for Mine Borehole Water Level Monitoring
 
-
+For each group of water inrush data, forward filling interpolation is first applied to correct missing and erroneous values. The processed data is then decomposed and analyzed, followed by prediction using a BiLSTM model. The prediction results serve as input for the VAE-based anomaly detection model to identify anomalies in each data group. Finally, by incorporating the weights of each group, a comprehensive anomaly grading and early warning result is obtained.
 
 In Jingdianfenjie, to obtain the decomposition of a time series, you just need to assign model=additive. Multiplicative: multiplicative model.
 result = seasonal_decompose(df1, model='additive',period = 12)
